@@ -24,7 +24,6 @@ execute: async (interaction, client) => {
             }
             interaction.member = interaction.guild.members.cache.get(interaction.user.id);
     
-            //console.log(db.get(`guild_${interaction.guild.id}_settings`))
             console.log(`[SLASH COMMANDS] `.bold.red + `/${cmd.name}`.bold.blue + ` has been executed`.bold.white)
             cmd.execute(client, interaction, args);
         }
