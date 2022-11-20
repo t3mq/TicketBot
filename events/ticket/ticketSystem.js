@@ -71,6 +71,7 @@ module.exports = {
             interaction.guild.channels.create({
                 name: `ticket of ${interaction.user.username}`,
                 type: ChannelType.GuildText,
+                parent: config.parent,
                 permissionOverwrites: [{
                         id: interaction.user.id,
                         allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.ReadMessageHistory, PermissionFlagsBits.SendMessages],
@@ -111,6 +112,7 @@ module.exports = {
             interaction.guild.channels.create({
                 name: `ticket of ${interaction.user.username}`,
                 type: ChannelType.GuildText,
+                parent: config.parent,
                 permissionOverwrites: [{
                         id: interaction.user.id,
                         allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.ReadMessageHistory, PermissionFlagsBits.SendMessages],
@@ -146,10 +148,11 @@ module.exports = {
                     ephemeral: true
                 })
             })
-        } else if (interaction.customId === "answer") {
+        } else if (interaction.customId === "other") {
             interaction.guild.channels.create({
                 name: `ticket of ${interaction.user.username}`,
                 type: ChannelType.GuildText,
+                parent: config.parent,
                 permissionOverwrites: [{
                         id: interaction.user.id,
                         allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.ReadMessageHistory, PermissionFlagsBits.SendMessages],
