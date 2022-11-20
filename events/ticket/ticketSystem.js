@@ -107,7 +107,7 @@ module.exports = {
                 })
             })
 
-        } else if (interacion.customId === "answer") {
+        } else if (interaction.customId === "answer") {
             interaction.guild.channels.create({
                 name: `ticket of ${interaction.user.username}`,
                 type: ChannelType.GuildText,
@@ -146,7 +146,7 @@ module.exports = {
                     ephemeral: true
                 })
             })
-        } else if (interacion.customId === "answer") {
+        } else if (interaction.customId === "answer") {
             interaction.guild.channels.create({
                 name: `ticket of ${interaction.user.username}`,
                 type: ChannelType.GuildText,
